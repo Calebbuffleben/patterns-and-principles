@@ -111,7 +111,6 @@ Imagine a **printer spooler** in an office. Regardless of how many people send p
 ### Disadvantages of the Singleton Pattern
 
 - **Testing Challenges**: Introduces difficulties in unit testing due to global state.
-- **Tight Coupling**: Encourages reliance on a global instance, leading to tightly coupled code.
 - **Concurrency Issues**: In multi-threaded environments, care must be taken to avoid race conditions when creating the instance.
 - **Potential for Overuse**: Misuse can lead to anti-patterns, especially if multiple singletons are used unnecessarily.
 
