@@ -80,3 +80,38 @@ src/
 │           ├── PayPalPayment.ts        # Concrete strategy (PayPal)
 │           ├── CryptoWalletPayment.ts  # Concrete strategy (Crypto Wallet)
 │           └── example.test.ts         # Tests
+
+
+---
+
+## Focus: Singleton Pattern
+
+### What Is the Singleton Pattern?
+
+The **Singleton Pattern** is a **creational design pattern** that ensures a class has only **one instance** throughout the lifecycle of an application and provides a **global access point** to that instance.
+
+This is particularly useful when exactly one object is needed to coordinate actions across the system, such as a logging service or a database connection pool.
+
+---
+
+### Characteristics of the Singleton Pattern
+
+1. **Single Instance**: Guarantees that only one instance of the class exists.
+2. **Global Access**: Provides a way to access the instance globally without exposing how it is created.
+3. **Lazy Initialization**: The instance is created only when it is first accessed, optimizing resource usage.
+
+---
+
+### Real-World Analogy
+
+Imagine a **printer spooler** in an office. Regardless of how many people send print jobs, there should only be **one printer spooler** to avoid conflicts and manage the queue efficiently. The Singleton Pattern ensures this shared resource is only created once and accessed by all.
+
+---
+
+### Disadvantages of the Singleton Pattern
+
+- **Testing Challenges**: Introduces difficulties in unit testing due to global state.
+- **Tight Coupling**: Encourages reliance on a global instance, leading to tightly coupled code.
+- **Concurrency Issues**: In multi-threaded environments, care must be taken to avoid race conditions when creating the instance.
+- **Potential for Overuse**: Misuse can lead to anti-patterns, especially if multiple singletons are used unnecessarily.
+
