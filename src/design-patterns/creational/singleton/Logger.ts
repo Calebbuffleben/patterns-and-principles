@@ -2,6 +2,7 @@ class Logger {
     private static instance: Logger;
 
     private constructor() {
+        throw new Error("Use Logger.getInstance");
         // Private constructor prevents instantiation from outside.
     }
 
