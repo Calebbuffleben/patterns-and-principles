@@ -7,4 +7,23 @@ class Stock implements Subject {
         this.stockSymbol = stockSymbol;
         this.price = initialPrice;
     }
+
+    setPrice(newPrice: number): void {
+        this.price = newPrice;
+        this.notifyObservers();
+    }
+
+    addObserver(observer: Observer): void {
+        this.observers.push(observer);
+    }
+
+    removeObserver(observer: Observer): void {
+        this.observers = this.observers.filter(obs => obs !== observer);
+    }
+
+    notifyObservers(): void {
+        for(const observer of this.observers) {
+            observer.update(this.stockSymbol, this.price)
+        }
+    }
 }
