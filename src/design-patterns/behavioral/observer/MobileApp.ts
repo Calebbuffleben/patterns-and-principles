@@ -1,4 +1,4 @@
-class MobileApp implements Observer {
+export class MobileApp implements Observer {
     private appName: string;
 
     constructor(appName: string) {

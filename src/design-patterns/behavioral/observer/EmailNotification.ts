@@ -1,4 +1,4 @@
-class EmailNotification implements Observer {
+export class EmailNotification implements Observer {
     private email: string;
 
     constructor(email: string) {

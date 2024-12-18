@@ -1,4 +1,4 @@
-class Stock implements Subject {
+export class Stock implements Subject {
     private observers: Observer[] = [];
     private stockSymbol: string;
     private price: number;
